@@ -1,0 +1,22 @@
+{
+  "name": "YouTube Short AutoPlay",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Automatically skips to the next YouTube short after completion of the previous one.",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["https://www.youtube.com/shorts/*"],
+    "js": ["content.js"]
+  }],
+  "host_permissions": [
+    "https://www.youtube.com/"
+  ]
+}
