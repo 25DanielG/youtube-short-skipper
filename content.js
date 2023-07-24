@@ -25,7 +25,7 @@ function monitorVideoEnd(video) {
                 clearInterval(checkInterval);
             }
         }
-    }, 1000);
+    }, 500);
 }
 
 checkVideo();
